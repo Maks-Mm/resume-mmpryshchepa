@@ -1,13 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Rubik+Glitch&display=swap');
 
 .bungee-tint-regular {
-  font-family: "Bungee Tint", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Bungee Tint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .rubik-glitch-regular {
+    font-family: "Rubik Glitch", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bungee-tint {
+  font-family: "Bungee Tint", sans-serif;
+  font-weight: 400;
+}
+
+.rubik-glitch {
   font-family: "Rubik Glitch", system-ui;
   font-weight: 400;
-  font-style: normal;
 }
