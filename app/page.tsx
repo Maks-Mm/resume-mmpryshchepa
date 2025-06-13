@@ -1,7 +1,13 @@
-import Image from "next/image";
+// src/components/Home.jsx or app/page.tsx in Next.js
+import React from 'react';
+import SubHome from './components/SubHome';
 
-export default function Home() {
+const Home = () => {
   return (
-   <div>MM</div>
+    <div>
+      <SubHome />
+    </div>
   );
-}
+};
+
+export default Home;
