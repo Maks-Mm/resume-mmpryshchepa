@@ -2,35 +2,22 @@ import React from "react";
 
 const SubHome = () => {
   const skills = [
-    { skill: "Computers", percent: 100 },
-    { skill: "Communication Skills", percent: 100 },
-    { skill: "Open-minded & Cognitive Thinking", percent: 90 },
+    { skill: "Adobe Photoshop", percent: 90 },
+    { skill: "Photography", percent: 80 },
+    { skill: "Illustrator", percent: 75 },
+    { skill: "Media", percent: 50 },
   ];
 
   const languages = [
     { lang: "English", percent: 100 },
-    { lang: "German", percent: 90 },
+    { lang: "German", percent: 80 },
     { lang: "Russian", percent: 100 },
     { lang: "Ukrainian", percent: 100 },
-    { lang: "Polish", percent: 80 },
+    { lang: "Polish", percent: 85 },
   ];
 
   return (
     <div className="w3-light-grey">
-      {/* Top Banner */}
-      <div className="w3-display-container" style={{ height: "300px", overflow: "hidden" }}>
-        <img
-          src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Banner"
-          style={{ width: "100%", objectFit: "cover", height: "100%" }}
-        />
-        <div className="w3-display-middle w3-center">
-          <h1 className="w3-xxxlarge w3-text-white bungee-tint-regular">
-            Welcome to My Portfolio
-          </h1>
-        </div>
-      </div>
-
       <div className="w3-content w3-margin-top" style={{ maxWidth: "1400px" }}>
         <div className="w3-row-padding">
           {/* LEFT COLUMN */}
@@ -49,13 +36,11 @@ const SubHome = () => {
                     display: "block",
                   }}
                 />
-                <div className="w3-display-bottomleft w3-container w3-text-black">
-                  <h2>Maxim Pryshchepa</h2>
-                </div>
               </div>
               <div className="w3-container">
+                <h2 className="w3-center">Maxim Pryshchepa</h2>
                 <p><i className="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal" /> Web Engineer</p>
-                <p><i className="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal" /> Dortmund, Deutschland</p>
+                <p><i className="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal" /> Dortmund, Germany</p>
                 <p><i className="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal" /> mmpryshchepa@gmail.com</p>
                 <p><i className="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal" /> 733 152 465</p>
                 <hr />
@@ -91,12 +76,35 @@ const SubHome = () => {
                     </div>
                   </div>
                 ))}
+
+                <p className="w3-large w3-text-theme">
+                  <b><i className="fa fa-user fa-fw w3-margin-right w3-text-teal" /> Competences</b>
+                </p>
+                <ul>
+                  <li>Computer skills – very good</li>
+                  <li>Communication – very good</li>
+                  <li>Open and cognitive character</li>
+                </ul>
               </div>
             </div>
           </div>
 
-          {/* RIGHT COLUMN */}
-          <div className="w3-twothird">
+          {/* BANNER IMAGE BETWEEN LEFT AND RIGHT */}
+          <div className="w3-twothird w3-margin-top">
+            <div className="w3-display-container w3-margin-bottom" style={{ height: "300px", overflow: "hidden" }}>
+              <img
+                src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Banner"
+                style={{ width: "100%", objectFit: "cover", height: "100%" }}
+              />
+              <div className="w3-display-middle w3-center">
+                <h1 className="w3-xxxlarge w3-text-white bungee-tint-regular">
+                  Welcome to My Portfolio
+                </h1>
+              </div>
+            </div>
+
+            {/* RIGHT COLUMN CONTENT */}
             <div className="w3-container w3-card w3-white w3-margin-bottom">
               <h2 className="w3-text-grey w3-padding-16">
                 <i className="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal" />
@@ -104,24 +112,24 @@ const SubHome = () => {
               </h2>
               <div className="w3-container">
                 <h5 className="w3-opacity">
-                  <b>Driver Coordinator / Logistics Company</b>
+                  <b>Driver Coordinator – Logistic Company</b>
                 </h5>
                 <h6 className="w3-text-teal">
                   <i className="fa fa-calendar fa-fw w3-margin-right" />
-                  2023 - 2024
+                  2023 – 2024
                 </h6>
-                <p>Coordinated drivers, managed routes and documentation, ensured timely delivery and communication.</p>
+                <p>Worked with drivers, scheduling, and communication in a fast-paced logistics environment.</p>
                 <hr />
               </div>
               <div className="w3-container">
                 <h5 className="w3-opacity">
-                  <b>Call Center Consultant / Brand Services</b>
+                  <b>Call Center Consultant – Brand Services</b>
                 </h5>
                 <h6 className="w3-text-teal">
                   <i className="fa fa-calendar fa-fw w3-margin-right" />
-                  2022 - 2023
+                  2022 – 2023
                 </h6>
-                <p>Consulted clients via phone and email, provided information about products and services, handled inquiries.</p>
+                <p>Answered client inquiries and represented brand partners in customer support roles.</p>
                 <hr />
               </div>
             </div>
@@ -133,24 +141,13 @@ const SubHome = () => {
               </h2>
               <div className="w3-container">
                 <h5 className="w3-opacity">
-                  <b>Design, Web Engineering & AI Studies</b>
-                </h5>
-                <h6 className="w3-text-teal">
-                  <i className="fa fa-calendar fa-fw w3-margin-right" />
-                  2021 - Present
-                </h6>
-                <p>Ongoing personal development in design, web engineering, and AI for 4 years.</p>
-                <hr />
-              </div>
-              <div className="w3-container">
-                <h5 className="w3-opacity">
-                  <b>College of Industry and Economy, Berdychiv</b>
+                  <b>College of Industry and Economy – Berdychiv</b>
                 </h5>
                 <h6 className="w3-text-teal">
                   <i className="fa fa-calendar fa-fw w3-margin-right" />
                   Graduated
                 </h6>
-                <p>Completed studies in industry and economy.</p>
+                <p>Studied Design, Artificial Intelligence, and Web Engineering over the past 4 years.</p>
                 <hr />
               </div>
             </div>
