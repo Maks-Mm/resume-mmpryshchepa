@@ -1,29 +1,66 @@
-// HeaderNav.jsx
 import React from "react";
 
 const HeaderNav = () => {
   return (
-    <nav
-      style={{
-        top: 0,
-        left: 0,
-        right: 0,
-        height: "60px", // or whatever height you want
-        backgroundColor: "#333",
-        color: "white",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        zIndex: 9999, // on top of other elements
-        padding: " 20px ",
-        boxSizing: "border-box",
-        marginBottom: "100px",
-        
-      }}
-    >
-      {/* Navbar content */}
-      Fixed HeaderNav
-    </nav>
+    <>
+      <nav
+        style={{
+          position: "fixed",
+          top: "10px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          background: "black",
+          backdropFilter: "blur(15px)",
+          WebkitBackdropFilter: "blur(15px)",
+          borderRadius: "50px",
+          padding: "10px",
+          display: "flex",
+          gap: "10px",
+          transition: "all 0.3s ease",
+          zIndex: 1000,
+        }}
+        className="navbar"
+      >
+        <div className="nav-item">
+          <img
+            src="https://img.icons8.com/?size=24&id=1iF9PyJ2Thzo&format=png&color=FFFFFF"
+            className="icon"
+            alt="Home"
+          />
+          <span>Home</span>
+        </div>
+        <div className="nav-item">
+          <img
+            src="https://img.icons8.com/?size=24&id=M1HUQOE9lLoG&format=png&color=FFFFFF"
+            className="icon"
+            alt="Experience"
+          />
+          <span>Experience</span>
+        </div>
+        <div className="nav-item">
+          <img
+            src="https://img.icons8.com/?size=24&id=79387&format=png&color=FFFFFF"
+            className="icon"
+            alt="Education"
+          />
+          <span>Education</span>
+        </div>
+        <div className="nav-item">
+          <img
+            src="https://img.icons8.com/?size=24&id=6H65NWsqha0Z&format=png&color=ffffff"
+            className="icon"
+            alt="Contact"
+          />
+          <span>Contact</span>
+        </div>
+      </nav>
+
+      <div>
+        {/* Example page content */}
+       
+        <div style={{ height: "30vh" }}></div>
+      </div>
+    </>
   );
 };
 

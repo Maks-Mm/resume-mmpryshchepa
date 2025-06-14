@@ -4,11 +4,10 @@ import SubHome from './components/SubHome';
 import HeaderNav from './components/HeaderNav';
 
 const Home = () => {
-  return (
-    <div style={{ paddingTop: "60px" }}>
-  <HeaderNav />
-  <SubHome />
-</div>
+  return (<>
+    <HeaderNav />
+    <SubHome />
+  </>
   );
 };
 

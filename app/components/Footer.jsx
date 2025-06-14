@@ -8,7 +8,7 @@ const styles = {
     padding: "1rem",
     textAlign: "center",
     backgroundColor: "black",
-    width: "95%",
+    width: "90%",
     marginTop: "15px",
     marginLeft: "-3px",
   },
