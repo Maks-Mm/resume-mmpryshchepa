@@ -1,4 +1,12 @@
 import React from "react";
+import { FaWhatsapp } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
+import { FaMapLocationDot } from "react-icons/fa6";
+import { IoPhonePortrait } from "react-icons/io5";
+import { FaComputerMouse } from "react-icons/fa6";
+import { AiFillSetting } from "react-icons/ai";
+import { FaLanguage } from "react-icons/fa";
+import { FcIdea } from "react-icons/fc";
 
 const SubHome = () => {
   const skills = [
@@ -25,28 +33,37 @@ const SubHome = () => {
             <div className="w3-white w3-text-grey w3-card-4">
               <div className="w3-display-container">
                 <img
-                  src="avatar.jpg"
+                  src="photo-profile-removebg-preview(2).png"
                   alt="Avatar"
                   style={{
                     width: "120px",
                     height: "120px",
                     borderRadius: "50%",
                     objectFit: "cover",
-                    margin: "16px auto",
                     display: "block",
+                    border: "1px solid black", // <-- updated from #fff to black
                   }}
                 />
+
               </div>
               <div className="w3-container">
                 <h2 className="w3-center">Maxim Pryshchepa</h2>
-                <p><i className="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal" /> Web Engineer</p>
-                <p><i className="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal" /> Dortmund, Germany</p>
-                <p><i className="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal" /> mmpryshchepa@gmail.com</p>
-                <p><i className="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal" /> 733 152 465</p>
+                <p><i className="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal" /><FaComputerMouse/> Web Engineer</p>
+                <p><i className="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal" /><FaMapLocationDot/> Dortmund, Germany</p>
+                <p><i className="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal" /><BiLogoGmail/> mmpryshchepa@gmail.com</p>
+                <p><i className="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal" /><IoPhonePortrait/> +49 1523 480 39 26</p>
                 <hr />
 
                 <p className="w3-large">
-                  <b><i className="fa fa-asterisk fa-fw w3-margin-right w3-text-teal" /> Skills</b>
+                  <div className="w3-display-container w3-margin-bottom" style={{ height: "300px", overflow: "hidden" }}>
+                    <img
+                      src="https://plus.unsplash.com/premium_photo-1681412504590-5c23f9a04e3d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Banner"
+                      style={{ width: "100%", objectFit: "cover", height: "100%" }}
+                    />
+
+                  </div>
+                  <b><i className="fa fa-asterisk fa-fw w3-margin-right w3-text-teal" /><AiFillSetting/> Skills</b>
                 </p>
                 {skills.map(({ skill, percent }, i) => (
                   <div key={i}>
@@ -63,7 +80,7 @@ const SubHome = () => {
                 ))}
 
                 <p className="w3-large w3-text-theme">
-                  <b><i className="fa fa-globe fa-fw w3-margin-right w3-text-teal" /> Languages</b>
+                  <b><i className="fa fa-globe fa-fw w3-margin-right w3-text-teal" /><FaLanguage/> Languages</b>
                 </p>
                 {languages.map(({ lang, percent }, i) => (
                   <div key={i}>
@@ -78,7 +95,7 @@ const SubHome = () => {
                 ))}
 
                 <p className="w3-large w3-text-theme">
-                  <b><i className="fa fa-user fa-fw w3-margin-right w3-text-teal" /> Competences</b>
+                  <b><i className="fa fa-user fa-fw w3-margin-right w3-text-teal" /><FcIdea/> Competences</b>
                 </p>
                 <ul>
                   <li>Computer skills – very good</li>
@@ -93,15 +110,11 @@ const SubHome = () => {
           <div className="w3-twothird w3-margin-top">
             <div className="w3-display-container w3-margin-bottom" style={{ height: "300px", overflow: "hidden" }}>
               <img
-                src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://plus.unsplash.com/premium_photo-1661409176914-ea1ef6892a7b?q=80&w=2121&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Banner"
                 style={{ width: "100%", objectFit: "cover", height: "100%" }}
               />
-              <div className="w3-display-middle w3-center">
-                <h1 className="w3-xxxlarge w3-text-white bungee-tint-regular">
-                  Welcome to My Portfolio
-                </h1>
-              </div>
+
             </div>
 
             {/* RIGHT COLUMN CONTENT */}
@@ -120,6 +133,14 @@ const SubHome = () => {
                 </h6>
                 <p>Worked with drivers, scheduling, and communication in a fast-paced logistics environment.</p>
                 <hr />
+                <div className="w3-display-container w3-margin-bottom" style={{ height: "300px", overflow: "hidden" }}>
+                  <img
+                    src="https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjU1fHxidXNpbmVzc3xlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Banner"
+                    style={{ width: "100%", objectFit: "cover", height: "100%" }}
+                  />
+
+                </div>
               </div>
               <div className="w3-container">
                 <h5 className="w3-opacity">
@@ -131,6 +152,14 @@ const SubHome = () => {
                 </h6>
                 <p>Answered client inquiries and represented brand partners in customer support roles.</p>
                 <hr />
+              </div>
+              <div className="w3-display-container w3-margin-bottom" style={{ height: "300px", overflow: "hidden" }}>
+                <img
+                  src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=2006&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Banner"
+                  style={{ width: "100%", objectFit: "cover", height: "100%" }}
+                />
+
               </div>
             </div>
 
@@ -151,6 +180,14 @@ const SubHome = () => {
                 <hr />
               </div>
             </div>
+            <div className="w3-display-container w3-margin-bottom" style={{ height: "300px", overflow: "hidden" }}>
+              <img
+                src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Banner"
+                style={{ width: "100%", objectFit: "cover", height: "100%" }}
+              />
+
+            </div>
           </div>
         </div>
       </div>
@@ -158,6 +195,8 @@ const SubHome = () => {
       {/* Footer */}
       <footer className="w3-container w3-teal w3-center w3-margin-top">
         <p>Find me on social media.</p>
+        <BiLogoGmail/>
+        <FaWhatsapp/>
         <i className="fa fa-facebook-official w3-hover-opacity" />
         <i className="fa fa-instagram w3-hover-opacity" />
         <i className="fa fa-snapchat w3-hover-opacity" />
