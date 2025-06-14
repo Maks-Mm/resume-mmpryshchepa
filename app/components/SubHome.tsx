@@ -42,7 +42,7 @@ const SubHome = () => {
             className="w3-third"
             data-aos="fade-up"
             data-aos-duration="3000"
-          >
+            >
             <div className="w3-white w3-text-grey w3-card-4">
               <div className="w3-display-container">
                 <img
@@ -56,7 +56,7 @@ const SubHome = () => {
                     display: "block",
                     border: "1px solid black",
                   }}
-                />
+                  />
               </div>
               <div className="w3-container">
                 <h2 className="w3-center">Maxim Pryshchepa</h2>

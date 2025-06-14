@@ -8,9 +8,9 @@ const styles = {
     padding: "1rem",
     textAlign: "center",
     backgroundColor: "black",
-    width: "90%",
+    width: "95%",
     marginTop: "15px",
-    marginLeft: "-2px",
+    marginLeft: "-3px",
   },
   footer: {
     marginTop: "1rem",
