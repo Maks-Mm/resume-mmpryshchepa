@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Rubik+Glitch&display=swap');
 
+
+@font-face {
+  font-family: "Ponomar";
+  src: url("/fonts/Ponomar-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.ponomar-regular {
+  font-family: "Ponomar", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+/* globals.css or a relevant CSS file */
+.font-ponomar {
+  font-family: 'Ponomar', system-ui, sans-serif;
+}
+
 .bungee-tint-regular {
     font-family: "Bungee Tint", sans-serif;
     font-weight: 400;

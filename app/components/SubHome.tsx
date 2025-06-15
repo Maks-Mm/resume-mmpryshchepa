@@ -151,7 +151,7 @@ const SubHome = () => {
             <div
               className="w3-display-container w3-margin-bottom"
               style={{ height: "300px", overflow: "hidden" }}
-            >
+            > <hr />
               <img
                 src="https://images.unsplash.com/photo-1686061594225-3e92c0cd51b0?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Banner"
