@@ -26,11 +26,11 @@ const SubHome = () => {
   ];
 
   const languages = [
-    { lang: "English", percent: 100 },
-    { lang: "German", percent: 80 },
-    { lang: "Russian", percent: 100 },
-    { lang: "Ukrainian", percent: 100 },
-    { lang: "Polish", percent: 85 },
+    { lang: "English", percent: 100, flag: "🇬🇧" },
+    { lang: "German", percent: 80, flag: "🇩🇪" },
+    { lang: "Russian", percent: 100, flag: "🇷🇺" },
+    { lang: "Ukrainian", percent: 100, flag: "🇺🇦" },
+    { lang: "Polish", percent: 85, flag: "🇵🇱" },
   ];
 
   return (
@@ -42,7 +42,7 @@ const SubHome = () => {
             className="w3-third"
             data-aos="fade-up"
             data-aos-duration="3000"
-            >
+          >
             <div className="w3-white w3-text-grey w3-card-4">
               <div className="w3-display-container">
                 <img
@@ -56,7 +56,7 @@ const SubHome = () => {
                     display: "block",
                     border: "1px solid black",
                   }}
-                  />
+                />
               </div>
               <div className="w3-container">
                 <h2 className="w3-center">Maxim Pryshchepa</h2>
@@ -74,7 +74,6 @@ const SubHome = () => {
                 </p>
                 <hr />
 
-                {/* Changed from <p> to <div> to fix invalid nesting */}
                 <div className="w3-large">
                   <div
                     className="w3-display-container w3-margin-bottom"
@@ -113,10 +112,10 @@ const SubHome = () => {
                   </b>
                 </p>
 
-                {languages.map(({ lang, percent }, i) => (
+                {languages.map(({ lang, percent, flag }, i) => (
                   <div key={i}>
                     <p className="flex items-center gap-2">
-                      <span className="text-teal-600 text-lg">•</span> {lang}
+                      <span className="text-teal-600 text-lg">•</span> {flag} {lang}
                     </p>
                     <div className="w3-light-grey w3-round-xlarge">
                       <div
@@ -151,7 +150,8 @@ const SubHome = () => {
             <div
               className="w3-display-container w3-margin-bottom"
               style={{ height: "300px", overflow: "hidden" }}
-            > <hr />
+            >
+              <hr />
               <img
                 src="https://images.unsplash.com/photo-1686061594225-3e92c0cd51b0?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Banner"
@@ -166,14 +166,13 @@ const SubHome = () => {
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"
             >
-              <h2 className="w3-text-grey w3-padding-16">
-                Work Experience
-              </h2>
+              <h2 className="w3-text-grey w3-padding-16">Work Experience</h2>
+
               <div className="w3-container">
                 <h5 className="w3-opacity">
                   <b>Driver Coordinator – Logistic Company</b>
                 </h5>
-                <h6 className="w3-text-teal">2023 – 2024</h6>
+                <h6 className="w3-text-teal">2016 – 2019</h6>
                 <p>
                   Worked with drivers, scheduling, and communication in a fast-paced
                   logistics environment.
@@ -190,17 +189,32 @@ const SubHome = () => {
                   />
                 </div>
               </div>
+
               <div className="w3-container">
                 <h5 className="w3-opacity">
                   <b>Call Center Consultant – Brand Services</b>
                 </h5>
-                <h6 className="w3-text-teal">2022 – 2023</h6>
+                <h6 className="w3-text-teal">2016 – 2019</h6>
                 <p>
-                  Answered client inquiries and represented brand partners in customer
-                  support roles.
+                  Handled client inquiries and represented major European corporate clients such as Metro and Auchan.
+                  Consulted on quality of service, pricing, and article assortment to ensure customer satisfaction and brand standards.
                 </p>
                 <hr />
               </div>
+
+              <div className="w3-container">
+                <h5 className="w3-opacity">
+                  <b>Consultant & Representative – Welyka Kashenia</b>
+                </h5>
+                <h6 className="w3-text-teal">2016 – 2019</h6>
+                <p>
+                  Provided consultations on all articles and represented the firm in negotiations and bids.
+                  Coordinated with clients and partners to maintain quality standards, pricing strategy, and assortment diversity.
+                  Supported client needs across Europe, ensuring optimal service and representation of the firm’s interests.
+                </p>
+                <hr />
+              </div>
+
               <div
                 className="w3-display-container w3-margin-bottom"
                 style={{ height: "300px", overflow: "hidden" }}
