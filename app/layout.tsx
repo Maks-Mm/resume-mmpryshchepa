@@ -1,6 +1,7 @@
 import React from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Bebas_Neue, Bungee_Tint, Rubik_Glitch } from "next/font/google";
+import { ThemeProvider } from './components/ThemeContext'; // Adjust the import path as necessary
 
 const geistSans = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
@@ -25,7 +26,7 @@ export default function RootLayout({
           antialiased
         `}
       >
-        {children}
+       <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

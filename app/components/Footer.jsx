@@ -1,5 +1,5 @@
 import React from "react";
-import { FaTiktok, FaTwitter, FaYoutube, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaGoogle, FaTwitter, FaYoutube, FaFacebook, FaInstagram } from "react-icons/fa";
 
 const styles = {
   fieldset: {
@@ -11,6 +11,7 @@ const styles = {
     width: "90%",
     marginTop: "15px",
     marginLeft: "-3px",
+    
   },
   footer: {
     marginTop: "1rem",
@@ -35,7 +36,7 @@ const Footer = () => {
       <footer style={styles.footer}>
         <div style={styles.iconContainer}>
           <a href="#" style={styles.socialButton} aria-label="TikTok">
-            <FaTiktok color="#000000" size={iconSize} />
+            <FaGoogle color="white" size={iconSize} />
           </a>
           <a href="#" style={styles.socialButton} aria-label="Twitter">
             <FaTwitter color="#1DA1F2" size={iconSize} />
