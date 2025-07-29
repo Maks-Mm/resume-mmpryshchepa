@@ -12,6 +12,7 @@ import { GiForklift, GiDeliveryDrone } from "react-icons/gi";
 import { MdInventory, MdComputer } from "react-icons/md";
 import Footer from './Footer';
 import { useTheme } from './ThemeContext';
+import PermanentMarkerText from './PermanentMarkerText';
 
 const SubHome = () => {
   const { theme, toggleTheme } = useTheme();
@@ -70,22 +71,24 @@ const SubHome = () => {
                 />
               </div>
               <div className="w3-container">
-                <h2 className="w3-center">Maksym Pryshchepa</h2>
+                <h2 className="w3-center">
+                  <PermanentMarkerText>Maksym Pryshchepa</PermanentMarkerText>
+                </h2>
                 <p className="flex items-center gap-4">
                   <FaWarehouse style={iconStyles.mouse} className="inline" />
-                  Lagerist Lagermitarbeiter  Logistiker
+                  <PermanentMarkerText>Lagerist Lagermitarbeiter Logistiker</PermanentMarkerText>
                 </p>
                 <p className="flex items-center gap-4">
                   <FaMapLocationDot style={iconStyles.location} className="inline" />
-                  Dortmund, Germany
+                  <PermanentMarkerText>Dortmund, Germany</PermanentMarkerText>
                 </p>
                 <p className="flex items-center gap-4">
                   <BiLogoGmail style={iconStyles.gmail} className="inline" />
-                  mmpryshchepa@gmail.com
+                  <PermanentMarkerText>mmpryshchepa@gmail.com</PermanentMarkerText>
                 </p>
                 <p className="flex items-center gap-4">
                   <IoPhonePortrait style={iconStyles.phone} className="inline" />
-                  +49 1523 480 39 26
+                  <PermanentMarkerText>+49 1523 480 39 26</PermanentMarkerText>
                 </p>
                 <hr />
 
@@ -95,7 +98,7 @@ const SubHome = () => {
                     className="px-4 py-2 rounded-md bg-gray-800 text-white dark:bg-gray-200 dark:text-black"
                     aria-label="Toggle Theme"
                   >
-                    Toggle Theme (Current: {theme})
+                    <PermanentMarkerText>Toggle Theme (Current: {theme})</PermanentMarkerText>
                   </button>
                 </div>
 
@@ -105,24 +108,26 @@ const SubHome = () => {
                       src="https://media.istockphoto.com/id/1400361180/de/vektor/gesch%C3%A4ftsleute-springen-die-den-sieg-feiern.webp?s=2048x2048&w=is&k=20&c=WWQX4wj3C1doMeKpYW2pYJQVUg5-HnmqppPV0WCFU-Y="
                       alt="Modern Warehouse"
                       style={{ width: '100%', objectFit: 'cover', height: '100%', objectPosition: 'center 40%' }}
-
                     />
                   </div>
                   <b className="flex items-center gap-2 text-blue-600">
                     <AiFillSetting style={iconStyles.skillSetting} />
-                    Fähigkeiten
+                    <PermanentMarkerText>Fähigkeiten</PermanentMarkerText>
                   </b>
                 </div>
 
                 {skills.map(({ skill, percent, icon }, i) => (
                   <div key={i}>
-                    <p>{icon}{skill}</p>
+                    <p>
+                      {icon}
+                      <PermanentMarkerText>{skill}</PermanentMarkerText>
+                    </p>
                     <div className="w3-light-grey w3-round-xlarge w3-small">
                       <div
                         className="w3-container w3-center w3-round-xlarge w3-teal"
                         style={{ width: `${percent}%` }}
                       >
-                        {percent >= 80 && <span className="w3-text-white">{percent}%</span>}
+                        {percent >= 80 && <span className="w3-text-white"><PermanentMarkerText>{percent}%</PermanentMarkerText></span>}
                       </div>
                     </div>
                   </div>
@@ -130,13 +135,14 @@ const SubHome = () => {
 
                 <p className="w3-large w3-text-theme flex items-center gap-2 mt-4">
                   <FaLanguage style={iconStyles.language} />
-                  <b>Sprachen</b>
+                  <PermanentMarkerText><b>Sprachen</b></PermanentMarkerText>
                 </p>
 
                 {languages.map(({ lang, percent, flag }, i) => (
                   <div key={i}>
                     <p className="flex items-center gap-2">
-                      <span className="text-teal-600 text-lg">•</span> {flag} {lang}
+                      <span className="text-teal-600 text-lg">•</span>
+                      <PermanentMarkerText>{flag} {lang}</PermanentMarkerText>
                     </p>
                     <div className="w3-light-grey w3-round-xlarge">
                       <div
@@ -149,14 +155,14 @@ const SubHome = () => {
 
                 <p className="w3-large w3-text-theme flex items-center gap-2 mt-4">
                   <FaLightbulb style={iconStyles.lightbulb} />
-                  <b>Kompetenzen</b>
+                  <PermanentMarkerText><b>Kompetenzen</b></PermanentMarkerText>
                 </p>
                 <ul>
-                  <li>Zuverlässigkeit und Pünktlichkeit</li>
-                  <li>Erfahrung mit modernen Lagersystemen</li>
-                  <li>Teamorientierte Arbeitsweise</li>
-                  <li>Gültiger Staplerschein</li>
-                  <li>Grundkenntnisse in Webentwicklung</li>
+                  <li><PermanentMarkerText>Zuverlässigkeit und Pünktlichkeit</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Erfahrung mit modernen Lagersystemen</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Teamorientierte Arbeitsweise</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Gültiger Staplerschein</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Grundkenntnisse in Webentwicklung</PermanentMarkerText></li>
                 </ul>
               </div>
             </div>
@@ -177,7 +183,7 @@ const SubHome = () => {
                   width: '100%',
                   objectFit: 'cover',
                   height: '100%',
-                  objectPosition: 'center 30%'  // This moves the focal point 70% down the image
+                  objectPosition: 'center 30%'
                 }}
               />
             </div>
@@ -188,81 +194,85 @@ const SubHome = () => {
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"
             >
-              <h2 className="w3-text-grey w3-padding-16">Beruflicher Werdegang</h2>
+              <h2 className="w3-text-grey w3-padding-16">
+                <PermanentMarkerText>Beruflicher Werdegang</PermanentMarkerText>
+              </h2>
 
               <div className="w3-container">
                 <h5 className="w3-opacity">
-                  <b>Lagermitarbeiter - Falkensee SE, Siemens Energy</b>
+                  <PermanentMarkerText><b>Lagermitarbeiter - Falkensee SE, Siemens Energy</b></PermanentMarkerText>
                 </h5>
-                <h6 className="w3-text-teal">bis 04.2025</h6>
+                <h6 className="w3-text-teal"><PermanentMarkerText>bis 04.2025</PermanentMarkerText></h6>
                 <ul>
-                  <li>Verantwortung für die Lagerorganisation und -verwaltung</li>
-                  <li>Unterstützung bei der Qualitätskontrolle und Dokumentation</li>
-                  <li>Mitarbeit bei Wareneingängen und -ausgängen</li>
+                  <li><PermanentMarkerText>Verantwortung für die Lagerorganisation und -verwaltung</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Unterstützung bei der Qualitätskontrolle und Dokumentation</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Mitarbeit bei Wareneingängen und -ausgängen</PermanentMarkerText></li>
                 </ul>
                 <hr />
                 <div className="w3-display-container w3-margin-bottom" style={{ height: '250px', overflow: 'hidden' }}>
                   <img
                     src="https://media.istockphoto.com/id/1400361273/de/vektor/kontrollk%C3%A4stchen-f%C3%BCr-lagerarbeiter-distributions-und-delivery-storage-konzept.webp?s=2048x2048&w=is&k=20&c=Lpq79t2wG7fNWHRG_0IiEUR3A3BPVYVVhk51UP2iqVo="
                     alt="Warehouse Management"
-                    style={{ width: '100%', objectFit: 'cover', height: '100%',objectPosition: 'center 30%'  }}
+                    style={{ width: '100%', objectFit: 'cover', height: '100%', objectPosition: 'center 30%' }}
                   />
                 </div>
               </div>
 
               <div className="w3-container">
                 <h5 className="w3-opacity">
-                  <b>Lagermitarbeiter - BSH Service Nauen GmbH</b>
+                  <PermanentMarkerText><b>Lagermitarbeiter - BSH Service Nauen GmbH</b></PermanentMarkerText>
                 </h5>
-                <h6 className="w3-text-teal">11/2022 – 11/2023</h6>
+                <h6 className="w3-text-teal"><PermanentMarkerText>11/2022 – 11/2023</PermanentMarkerText></h6>
                 <ul>
-                  <li>Kommissionierung und Verpackung von Waren</li>
-                  <li>Bedienung von Scansystemen zur Erfassung von Lagerbeständen</li>
-                  <li>Teamarbeit in einem respektvollen Arbeitsumfeld</li>
+                  <li><PermanentMarkerText>Kommissionierung und Verpackung von Waren</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Bedienung von Scansystemen zur Erfassung von Lagerbeständen</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Teamarbeit in einem respektvollen Arbeitsumfeld</PermanentMarkerText></li>
                 </ul>
                 <hr />
                 <div className="w3-display-container w3-margin-bottom" style={{ height: '250px', overflow: 'hidden' }}>
                   <img
                     src="https://media.istockphoto.com/id/1400361275/de/vektor/gabelstapler-mit-mann-fahren.webp?s=2048x2048&w=is&k=20&c=DTgaotUmCUZDaGYLzPT32zeU2PH-Uesw4PVMst90So8="
                     alt="Inventory Scanning"
-                    style={{ width: '100%', objectFit: 'cover', height: '100%',objectPosition: 'center 40%'  }}
+                    style={{ width: '100%', objectFit: 'cover', height: '100%', objectPosition: 'center 40%' }}
                   />
                 </div>
               </div>
 
               <div className="w3-container">
                 <h5 className="w3-opacity">
-                  <b>Lagermitarbeiter - Medizinpräparate Farmacol.SA</b>
+                  <PermanentMarkerText><b>Lagermitarbeiter - Medizinpräparate Farmacol.SA</b></PermanentMarkerText>
                 </h5>
-                <h6 className="w3-text-teal">2019 – 2021</h6>
+                <h6 className="w3-text-teal"><PermanentMarkerText>2019 – 2021</PermanentMarkerText></h6>
                 <ul>
-                  <li>Lagerverwaltung und Qualitätskontrolle</li>
-                  <li>Unterstützung bei der Optimierung von Arbeitsabläufen</li>
-                  <li>Verantwortung für Warenbestände</li>
+                  <li><PermanentMarkerText>Lagerverwaltung und Qualitätskontrolle</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Unterstützung bei der Optimierung von Arbeitsabläufen</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Verantwortung für Warenbestände</PermanentMarkerText></li>
                 </ul>
                 <hr />
               </div>
 
-              <h2 className="w3-text-grey w3-padding-16">Ausbildung</h2>
+              <h2 className="w3-text-grey w3-padding-16">
+                <PermanentMarkerText>Ausbildung</PermanentMarkerText>
+              </h2>
               <div className="w3-container">
                 <h5 className="w3-opacity">
-                  <b>Webentwicklung (in Ausbildung)</b>
+                  <PermanentMarkerText><b>Webentwicklung (in Ausbildung)</b></PermanentMarkerText>
                 </h5>
-                <h6 className="w3-text-teal">2022 – heute</h6>
-                <p>Parallele Ausbildung während der Berufstätigkeit</p>
+                <h6 className="w3-text-teal"><PermanentMarkerText>2022 – heute</PermanentMarkerText></h6>
+                <p><PermanentMarkerText>Parallele Ausbildung während der Berufstätigkeit</PermanentMarkerText></p>
                 <div className="w3-display-container w3-margin-bottom" style={{ height: '250px', overflow: 'hidden', marginTop: '20px' }}>
                   <img
                     src="https://media.istockphoto.com/id/1414609317/de/vektor/lieferkonzept-m%C3%A4nnlicher-kurier-liefert-ein-paket-und-stellt-eine-rechnung-aus-trendiger.webp?s=2048x2048&w=is&k=20&c=uMPN5nk6zGuYn8vQSnaK2IIj-UpnvYhgBMJ23FpEpC8="
                     alt="Web Development"
-                    style={{ width: '100%', objectFit: 'cover', height: '100%',objectPosition: 'center 30%'  }}
+                    style={{ width: '100%', objectFit: 'cover', height: '100%', objectPosition: 'center 30%' }}
                   />
                 </div>
               </div>
               <div className="w3-container">
                 <h5 className="w3-opacity">
-                  <b>Berdytschiwer Fachkolleg für Industrie, Wirtschaft und Recht</b>
+                  <PermanentMarkerText><b>Berdytschiwer Fachkolleg für Industrie, Wirtschaft und Recht</b></PermanentMarkerText>
                 </h5>
-                <h6 className="w3-text-teal">2012 – 2015</h6>
+                <h6 className="w3-text-teal"><PermanentMarkerText>2012 – 2015</PermanentMarkerText></h6>
               </div>
             </div>
           </div>
