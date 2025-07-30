@@ -1,7 +1,8 @@
+// app/layout.tsx
 import React from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Bebas_Neue, Bungee_Tint, Rubik_Glitch } from "next/font/google";
-import { ThemeProvider } from './components/ThemeContext'; // Adjust the import path as necessary
+import { ThemeProvider } from './components/ThemeContext';
 
 const geistSans = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
@@ -15,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`
           ${geistSans.variable}
@@ -26,7 +27,7 @@ export default function RootLayout({
           antialiased
         `}
       >
-       <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
