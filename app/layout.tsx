@@ -1,14 +1,9 @@
 // app/layout.tsx
-import React from "react";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Bebas_Neue, Bungee_Tint, Rubik_Glitch } from "next/font/google";
-import { ThemeProvider } from './components/ThemeContext';
+import './globals.css';
 
-const geistSans = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
-const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
-const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"], variable: "--font-bebas-neue" });
-const bungeeTint = Bungee_Tint({ weight: "400", subsets: ["latin"], variable: "--font-bungee-tint" });
-const rubikGlitch = Rubik_Glitch({ weight: "400", subsets: ["latin"], variable: "--font-rubik-glitch" });
+export const metadata = {
+  title: 'Toggle Mode',
+};
 
 export default function RootLayout({
   children,
@@ -17,18 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`
-          ${geistSans.variable}
-          ${geistMono.variable}
-          ${bebasNeue.variable}
-          ${bungeeTint.variable}
-          ${rubikGlitch.variable}
-          antialiased
-        `}
-      >
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

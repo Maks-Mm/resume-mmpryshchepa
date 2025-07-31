@@ -1,14 +1,13 @@
-// src/components/Home.jsx or app/page.tsx in Next.js
+// app/page.tsx
 import React from 'react';
-import SubHome from './components/SubHome';
 import HeaderNav from './components/HeaderNav';
+import SubHome from './components/SubHome';
 
-const Home = () => {
-  return (<>
-    <HeaderNav />
-    <SubHome />
-  </>
+export default function HomePage() {
+  return (
+    <>
+      <HeaderNav />
+      <SubHome />
+    </>
   );
-};
-
-export default Home;
+}

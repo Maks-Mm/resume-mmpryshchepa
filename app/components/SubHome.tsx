@@ -14,6 +14,7 @@ import { MdInventory, MdComputer } from "react-icons/md";
 import Footer from './Footer';
 import { useTheme } from './ThemeContext';
 import PermanentMarkerText from './PermanentMarkerText';
+import DarkModeToggle from './DarkModeToggle';
 
 const SubHome = () => {
   const { theme, toggleTheme } = useTheme();
@@ -94,13 +95,16 @@ const SubHome = () => {
                 <hr />
 
                 <div className="text-center mb-6">
-                  <button
+          <DarkModeToggle/>
+
+                    {/* Uncomment the button below to toggle theme */}
+                 {/*  <button
                     onClick={toggleTheme}
                     className="px-4 py-2 rounded-md bg-gray-800 text-white dark:bg-gray-200 dark:text-black"
                     aria-label="Toggle Theme"
                   >
                     <PermanentMarkerText>Toggle Theme (Current: {theme})</PermanentMarkerText>
-                  </button>
+                  </button> */}
                 </div>
 
                 <div className="w3-large">
