@@ -14,7 +14,6 @@ import { MdInventory, MdComputer } from "react-icons/md";
 import Footer from './Footer';
 import { useTheme } from './ThemeContext';
 import PermanentMarkerText from './PermanentMarkerText';
-import DarkModeToggle from './DarkModeToggle';
 
 const SubHome = () => {
   const { theme, toggleTheme } = useTheme();
@@ -74,7 +73,7 @@ const SubHome = () => {
               </div>
               <div className="w3-container">
                 <h2 className="w3-center">
-                  <PermanentMarkerText>Maksym Pryshchepa</PermanentMarkerText>
+                  <PermanentMarkerText>Maksymilian Kuzminski</PermanentMarkerText>
                 </h2>
                 <p className="flex items-center gap-4">
                   <FaWarehouse style={iconStyles.mouse} className="inline" />
@@ -95,7 +94,6 @@ const SubHome = () => {
                 <hr />
 
                 <div className="text-center mb-6">
-          <DarkModeToggle/>
 
                     {/* Uncomment the button below to toggle theme */}
                  {/*  <button
