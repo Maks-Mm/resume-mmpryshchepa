@@ -49,7 +49,7 @@ const SubHome = () => {
   ];
 
   return (
-    <div className={`w3-light-grey ${theme === 'dark' ? 'dark' : ''}`}>
+    <div className={`bg-gray-100 dark:bg-gray-900 text-black dark:text-white`}>
       <div className="w3-content w3-margin-top" style={{ maxWidth: '1400px' }}>
         <div className="w3-row-padding">
 
