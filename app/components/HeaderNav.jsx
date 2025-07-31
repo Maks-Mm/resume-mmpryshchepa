@@ -173,7 +173,6 @@ const HeaderNav = () => {
                   height: "26px",
                   borderRadius: "50px",
                   position: "relative",
-                  padding: "5px",
                   cursor: "pointer",
                   display: "flex",
                   justifyContent: "space-between",
