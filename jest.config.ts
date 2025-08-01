@@ -1,13 +1,17 @@
-// jest.config.ts
-export default {
-  preset: 'ts-jest',
+import nextJest from 'next/jest.js';
+
+const createJestConfig = nextJest({
+  dir: './', // your Next.js root dir
+});
+
+const customJestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testEnvironment: 'jsdom',
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1',
+    '^@/components/(.*)$': '<rootDir>/components/$1',
+    '^@/app/(.*)$': '<rootDir>/app/$1',
   },
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
-  testPathIgnorePatterns: ['/node_modules/', '/.next/'],
-  transform: {
-    '^.+\\.tsx?$': 'ts-jest',
-  },
+  transformIgnorePatterns: ['<rootDir>/node_modules/'],
 };
+
+export default createJestConfig(customJestConfig);
