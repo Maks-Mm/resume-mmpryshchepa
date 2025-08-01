@@ -50,3 +50,9 @@ body {
   font-family: 'Montserrat', sans-serif;
   transition: background 0.2s linear;
 }
+/* styles/globals.css */
+body.dark {
+  background-color: #121212;
+  color: white;
+  transition: background 0.3s, color 0.3s;
+}
