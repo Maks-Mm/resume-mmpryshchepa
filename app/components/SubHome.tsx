@@ -245,7 +245,7 @@ const SubHome = () => {
                 <p className="dark:text-gray-300"><PermanentMarkerText>Parallele Ausbildung während der Berufstätigkeit</PermanentMarkerText></p>
                 <div className="w3-display-container w3-margin-bottom" style={{ height: '250px', overflow: 'hidden', marginTop: '20px' }}>
                   <img
-                    src="https://media.istockphoto.com/id/1414609317/de/vektor/lieferkonzept-m%C3%A4nnlicher-kurier-liefert-ein-paket-und-stellt-eine-rechnung-aus-trendiger.webp?s=2048x2048&w=is&k=20&c=uMPN5nk6zGuYn8vQSnaK2IIj-UpnvYhgBMJ23FpEpC8="
+                    src="https://plus.unsplash.com/premium_photo-1679860750908-44be335e68da?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Web Development"
                     style={{ width: '100%', objectFit: 'cover', height: '100%', objectPosition: 'center 30%' }}
                   />
