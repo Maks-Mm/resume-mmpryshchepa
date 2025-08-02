@@ -108,11 +108,7 @@ const SubHome = () => {
 
                 <div className="w3-large">
                   <div className="w3-display-container w3-margin-bottom" style={{ height: '300px', overflow: 'hidden' }}>
-                    <img
-                      src="https://media.istockphoto.com/id/1400361180/de/vektor/gesch%C3%A4ftsleute-springen-die-den-sieg-feiern.webp?s=2048x2048&w=is&k=20&c=WWQX4wj3C1doMeKpYW2pYJQVUg5-HnmqppPV0WCFU-Y="
-                      alt="Modern Warehouse"
-                      style={{ width: '100%', objectFit: 'cover', height: '100%', objectPosition: 'center 40%' }}
-                    />
+                   <Carousel />
                   </div>
                   <b className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
                     <AiFillSetting style={iconStyles.skillSetting} />
@@ -205,11 +201,7 @@ const SubHome = () => {
                 </ul>
                 <hr className="dark:border-gray-700" />
                 <div className="w3-display-container w3-margin-bottom" style={{ height: '250px', overflow: 'hidden' }}>
-                  <img
-                    src="https://media.istockphoto.com/id/1400361273/de/vektor/kontrollk%C3%A4stchen-f%C3%BCr-lagerarbeiter-distributions-und-delivery-storage-konzept.webp?s=2048x2048&w=is&k=20&c=Lpq79t2wG7fNWHRG_0IiEUR3A3BPVYVVhk51UP2iqVo="
-                    alt="Warehouse Management"
-                    style={{ width: '100%', objectFit: 'cover', height: '100%', objectPosition: 'center 30%' }}
-                  />
+                <Carousel />
                 </div>
               </div>
 
@@ -225,11 +217,7 @@ const SubHome = () => {
                 </ul>
                 <hr className="dark:border-gray-700" />
                 <div className="w3-display-container w3-margin-bottom" style={{ height: '250px', overflow: 'hidden' }}>
-                  <img
-                    src="https://media.istockphoto.com/id/1400361275/de/vektor/gabelstapler-mit-mann-fahren.webp?s=2048x2048&w=is&k=20&c=DTgaotUmCUZDaGYLzPT32zeU2PH-Uesw4PVMst90So8="
-                    alt="Inventory Scanning"
-                    style={{ width: '100%', objectFit: 'cover', height: '100%', objectPosition: 'center 40%' }}
-                  />
+                  <Carousel />
                 </div>
               </div>
 

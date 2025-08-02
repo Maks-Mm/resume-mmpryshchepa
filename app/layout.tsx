@@ -2,7 +2,7 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Toggle Mode',
+  title: 'Resume',
 };
 
 export default function RootLayout({
