@@ -14,6 +14,7 @@ import { MdInventory, MdComputer } from "react-icons/md";
 import Footer from './Footer';
 import { useTheme } from './ThemeContext';
 import PermanentMarkerText from './PermanentMarkerText';
+import Carousel from './Carousel';
 
 const SubHome = () => {
   const { theme, toggleTheme } = useTheme();
@@ -95,8 +96,8 @@ const SubHome = () => {
 
                 <div className="text-center mb-6">
 
-                    {/* Uncomment the button below to toggle theme */}
-                 {/*  <button
+                  {/* Uncomment the button below to toggle theme */}
+                  {/*  <button
                     onClick={toggleTheme}
                     className="px-4 py-2 rounded-md bg-gray-800 text-white dark:bg-gray-200 dark:text-black"
                     aria-label="Toggle Theme"
@@ -179,16 +180,7 @@ const SubHome = () => {
             data-aos-duration="1500"
           >
             <div className="w3-display-container w3-margin-bottom" style={{ height: '300px', overflow: 'hidden' }}>
-              <img
-                src="https://media.istockphoto.com/id/1400353576/de/vektor/lagerarbeitergesch%C3%A4ft-mit-boxen-im-regal.webp?s=2048x2048&w=is&k=20&c=gZJK_OXTL6zsWIzttsoyWiP1tmsn2Be5WqjSMsh2EEI="
-                alt="Warehouse Organization"
-                style={{
-                  width: '100%',
-                  objectFit: 'cover',
-                  height: '100%',
-                  objectPosition: 'center 30%'
-                }}
-              />
+              <Carousel />
             </div>
 
             <div
