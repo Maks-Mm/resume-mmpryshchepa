@@ -31,7 +31,7 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 export const useTheme = () => useContext(ThemeContext);
 
 // --- PersonCard Component ---
-function PersonCard() {
+function PersonDate() {
   const { theme } = useTheme(); // Using the theme from context
 
   return (
@@ -156,9 +156,13 @@ function PersonCard() {
 export default function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 font-sans">
-        <PersonCard />
+      <div
+    className="min-h-[60vh] flex items-center justify-center bg-gray-100 dark:bg-gray-900 font-sans"
+    style={{ margin: "0 -100vh -40vh 0" }}
+  >
+        <PersonDate />
       </div>
     </ThemeProvider>
   );
 }
+

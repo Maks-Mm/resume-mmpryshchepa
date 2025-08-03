@@ -51,30 +51,22 @@ const SubHome = () => {
   ];
 
   return (
-    <div className={`bg-gray-100 dark:bg-gray-900 text-black dark:text-white`}>
+    <div className={`bg-gray-100 dark:bg-gray-900 text-black dark:text-white min-h-[60vh]`}>
       <div className="w3-content w3-margin-top" style={{ maxWidth: '1400px' }}>
         <div className="w3-row-padding">
 
           {/* LEFT COLUMN */}
           <div className="w3-third" data-aos="fade-up" data-aos-duration="3000">
             <div className={`w3-white w3-text-grey w3-card-4 ${theme === 'dark' ? 'dark:bg-gray-800 dark:text-white' : ''}`}>
-
-
               <div className="w3-container">
-                <hr />
-
-
-
-
-                <div className="w3-large">
-                  <div className="w3-display-container w3-margin-bottom" style={{ height: '300px', overflow: 'hidden' }}>
-                    <Carousel />
+                <div className="w-full flex flex-col items-center gap-6">
+                  <PersonDate />
+                  <div className="w-full">
+                    <b className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
+                      <AiFillSetting style={iconStyles.skillSetting} />
+                      <PermanentMarkerText>Fähigkeiten</PermanentMarkerText>
+                    </b>
                   </div>
-                <PersonDate />
-                  <b className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
-                    <AiFillSetting style={iconStyles.skillSetting} />
-                    <PermanentMarkerText>Fähigkeiten</PermanentMarkerText>
-                  </b>
                 </div>
 
                 {skills.map(({ skill, percent, icon }, i) => (
@@ -188,42 +180,17 @@ const SubHome = () => {
                 </h5>
                 <h6 className="w3-text-teal dark:text-teal-300"><PermanentMarkerText>2019 – 2021</PermanentMarkerText></h6>
                 <ul className="dark:text-gray-300">
-                  <li><PermanentMarkerText>Lagerverwaltung und Qualitätskontrolle</PermanentMarkerText></li>
-                  <li><PermanentMarkerText>Unterstützung bei der Optimierung von Arbeitsabläufen</PermanentMarkerText></li>
-                  <li><PermanentMarkerText>Verantwortung für Warenbestände</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Verwaltung und Ausgabe von medizinischen Produkten</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Inventur und Bestandsaufnahme</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Einhaltung von Hygienevorschriften</PermanentMarkerText></li>
                 </ul>
-                <hr className="dark:border-gray-700" />
-              </div>
-
-              <h2 className="w3-text-grey w3-padding-16 dark:text-gray-300">
-                <PermanentMarkerText>Ausbildung</PermanentMarkerText>
-              </h2>
-              <div className="w3-container">
-                <h5 className="w3-opacity dark:text-gray-200">
-                  <PermanentMarkerText><b>Webentwicklung (in Ausbildung)</b></PermanentMarkerText>
-                </h5>
-                <h6 className="w3-text-teal dark:text-teal-300"><PermanentMarkerText>2022 – heute</PermanentMarkerText></h6>
-                <p className="dark:text-gray-300"><PermanentMarkerText>Parallele Ausbildung während der Berufstätigkeit</PermanentMarkerText></p>
-                <div className="w3-display-container w3-margin-bottom" style={{ height: '250px', overflow: 'hidden', marginTop: '20px' }}>
-                  <img
-                    src="https://plus.unsplash.com/premium_photo-1679860750908-44be335e68da?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Web Development"
-                    style={{ width: '100%', objectFit: 'cover', height: '100%', objectPosition: 'center 30%' }}
-                  />
-                </div>
-              </div>
-              <div className="w3-container">
-                <h5 className="w3-opacity dark:text-gray-200">
-                  <PermanentMarkerText><b>Berdytschiwer Fachkolleg für Industrie, Wirtschaft und Recht</b></PermanentMarkerText>
-                </h5>
-                <h6 className="w3-text-teal dark:text-teal-300"><PermanentMarkerText>2012 – 2015</PermanentMarkerText></h6>
               </div>
             </div>
+
+            <Footer />
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 };
