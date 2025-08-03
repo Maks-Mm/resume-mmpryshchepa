@@ -4,17 +4,18 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { FaWhatsapp, FaMapLocationDot, FaComputerMouse, FaLanguage, FaLightbulb } from 'react-icons/fa6';
+import { FaMapLocationDot, FaLanguage, FaLightbulb } from 'react-icons/fa6';
 import { BiLogoGmail } from 'react-icons/bi';
 import { IoPhonePortrait } from 'react-icons/io5';
 import { AiFillSetting } from 'react-icons/ai';
 import { FaWarehouse, FaBoxOpen, FaClipboardCheck } from "react-icons/fa";
-import { GiForklift, GiDeliveryDrone } from "react-icons/gi";
+import { GiForklift } from "react-icons/gi";
 import { MdInventory, MdComputer } from "react-icons/md";
 import Footer from './Footer';
 import { useTheme } from './ThemeContext';
 import PermanentMarkerText from './PermanentMarkerText';
 import Carousel from './Carousel';
+import PersonDate from './PersonDate';
 
 const SubHome = () => {
   const { theme, toggleTheme } = useTheme();
@@ -57,59 +58,19 @@ const SubHome = () => {
           {/* LEFT COLUMN */}
           <div className="w3-third" data-aos="fade-up" data-aos-duration="3000">
             <div className={`w3-white w3-text-grey w3-card-4 ${theme === 'dark' ? 'dark:bg-gray-800 dark:text-white' : ''}`}>
-              <div className="w3-display-container" style={{ paddingTop: '40px' }}>
-                <img
-                  src="Foto3x4.jpg"
-                  alt="Avatar"
-                  style={{
-                    width: '120px',
-                    height: '120px',
-                    borderRadius: '50%',
-                    objectFit: 'cover',
-                    display: 'inline-block',
-                    border: '1px solid black',
-                    marginBottom: '20px'
-                  }}
-                />
-              </div>
+
+
               <div className="w3-container">
-                <h2 className="w3-center">
-                  <PermanentMarkerText>Maksymilian Kuzminski</PermanentMarkerText>
-                </h2>
-                <p className="flex items-center gap-4">
-                  <FaWarehouse style={iconStyles.mouse} className="inline" />
-                  <PermanentMarkerText>Lagerist Lagermitarbeiter Logistiker</PermanentMarkerText>
-                </p>
-                <p className="flex items-center gap-4">
-                  <FaMapLocationDot style={iconStyles.location} className="inline" />
-                  <PermanentMarkerText>Dortmund, Germany</PermanentMarkerText>
-                </p>
-                <p className="flex items-center gap-4">
-                  <BiLogoGmail style={iconStyles.gmail} className="inline" />
-                  <PermanentMarkerText>mmpryshchepa@gmail.com</PermanentMarkerText>
-                </p>
-                <p className="flex items-center gap-4">
-                  <IoPhonePortrait style={iconStyles.phone} className="inline" />
-                  <PermanentMarkerText>+49 1523 480 39 26</PermanentMarkerText>
-                </p>
                 <hr />
 
-                <div className="text-center mb-6">
 
-                  {/* Uncomment the button below to toggle theme */}
-                  {/*  <button
-                    onClick={toggleTheme}
-                    className="px-4 py-2 rounded-md bg-gray-800 text-white dark:bg-gray-200 dark:text-black"
-                    aria-label="Toggle Theme"
-                  >
-                    <PermanentMarkerText>Toggle Theme (Current: {theme})</PermanentMarkerText>
-                  </button> */}
-                </div>
+
 
                 <div className="w3-large">
                   <div className="w3-display-container w3-margin-bottom" style={{ height: '300px', overflow: 'hidden' }}>
-                   <Carousel />
+                    <Carousel />
                   </div>
+                <PersonDate />
                   <b className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
                     <AiFillSetting style={iconStyles.skillSetting} />
                     <PermanentMarkerText>Fähigkeiten</PermanentMarkerText>
@@ -201,7 +162,7 @@ const SubHome = () => {
                 </ul>
                 <hr className="dark:border-gray-700" />
                 <div className="w3-display-container w3-margin-bottom" style={{ height: '250px', overflow: 'hidden' }}>
-                <Carousel />
+                  <Carousel />
                 </div>
               </div>
 
