@@ -7,7 +7,7 @@ const styles = {
     borderRadius: "0.375rem", // approx rounded-md
     padding: "1rem",
     textAlign: "center",
-    width: "90%",
+    width: "100%",
     marginTop: "15px",
     marginLeft: "-3px",
     
