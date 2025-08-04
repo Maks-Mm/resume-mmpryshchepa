@@ -22,6 +22,8 @@ const HeaderNav = () => {
   useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth <= 768);
+      // Close menu if resized to desktop
+      if (window.innerWidth > 768) setMenuOpen(false);
     };
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
@@ -30,11 +32,7 @@ const HeaderNav = () => {
 
   // Toggle dark class on body
   useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark");
-    } else {
-      document.body.classList.remove("dark");
-    }
+    document.body.classList.toggle("dark", darkMode);
   }, [darkMode]);
 
   return (
@@ -45,17 +43,17 @@ const HeaderNav = () => {
           top: "20px",
           left: "50%",
           transform: "translateX(-50%)",
-          background: "rgba(0, 0, 0, 0.7)",
+          background: darkMode ? "rgba(30, 30, 30, 0.9)" : "rgba(0, 0, 0, 0.7)",
           backdropFilter: "blur(15px)",
           WebkitBackdropFilter: "blur(15px)",
           borderRadius: "50px",
-          padding: isMobile ? "10px 15px" : "10px 20px",
+          padding: isMobile ? (menuOpen ? "15px" : "10px 15px") : "10px 20px",
           display: "flex",
           flexDirection: isMobile ? "column" : "row",
           gap: isMobile ? (menuOpen ? "15px" : "0") : "20px",
           transition: "all 0.3s ease",
           zIndex: 1000,
-          border: "1px solid rgba(255, 255, 255, 0.1)",
+          border: `1px solid ${darkMode ? "rgba(100, 100, 100, 0.2)" : "rgba(255, 255, 255, 0.1)"}`,
           boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.2)",
           width: isMobile ? (menuOpen ? "calc(100% - 40px)" : "auto") : "auto",
           maxWidth: "90%",
@@ -74,7 +72,11 @@ const HeaderNav = () => {
               display: "flex",
               alignItems: "center",
               gap: "8px",
+              padding: "8px 12px",
+              width: "100%",
+              justifyContent: "center",
             }}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
             {menuOpen ? "✕" : "☰"}
             {!menuOpen && <span>Menu</span>}
@@ -88,13 +90,13 @@ const HeaderNav = () => {
                 key={item}
                 style={{
                   position: "relative",
-                  padding: isMobile ? "8px 0" : "10px 0",
+                  padding: isMobile ? "12px 0" : "10px 0",
                   cursor: "pointer",
                   color:
                     activeItem === item
                       ? "white"
                       : "rgba(255, 255, 255, 0.7)",
-                  transition: "color 0.3s ease",
+                  transition: "all 0.3s ease",
                   width: isMobile ? "100%" : "auto",
                   textAlign: isMobile ? "center" : "left",
                 }}
@@ -102,13 +104,21 @@ const HeaderNav = () => {
                   setActiveItem(item);
                   if (isMobile) setMenuOpen(false);
                 }}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    setActiveItem(item);
+                    if (isMobile) setMenuOpen(false);
+                  }
+                }}
               >
                 <div
                   style={{
                     display: "flex",
                     alignItems: "center",
-                    gap: "8px",
-                    padding: "0 10px",
+                    gap: "10px",
+                    padding: "0 15px",
                     justifyContent: isMobile ? "center" : "flex-start",
                   }}
                 >
@@ -130,7 +140,7 @@ const HeaderNav = () => {
                     style={{
                       fontWeight: activeItem === item ? "600" : "400",
                       transition: "all 0.3s ease",
-                      fontSize: isMobile ? "14px" : "16px",
+                      fontSize: isMobile ? "16px" : "16px",
                     }}
                   >
                     {item}
@@ -141,9 +151,9 @@ const HeaderNav = () => {
                     style={{
                       position: "absolute",
                       bottom: "0",
-                      left: isMobile ? "50%" : "10px",
+                      left: isMobile ? "50%" : "15px",
                       transform: isMobile ? "translateX(-50%)" : "none",
-                      width: isMobile ? "80%" : "calc(100% - 20px)",
+                      width: isMobile ? "70%" : "calc(100% - 30px)",
                       height: "2px",
                       background: "white",
                       borderRadius: "2px",
@@ -154,21 +164,29 @@ const HeaderNav = () => {
               </div>
             ))}
 
-            {/* 🌗 Toggle Switch */}
-            <div style={{ marginLeft: isMobile ? 0 : "10px" }}>
+            {/* Dark Mode Toggle */}
+            <div 
+              style={{ 
+                margin: isMobile ? "10px 0 5px" : "0 0 0 10px",
+                padding: isMobile ? "10px 0" : "0",
+                width: isMobile ? "100%" : "auto",
+                display: "flex",
+                justifyContent: "center"
+              }}
+            >
               <input
                 type="checkbox"
-                id="checkbox"
+                id="darkModeToggle"
                 className="checkbox"
                 checked={darkMode}
                 onChange={() => setDarkMode(!darkMode)}
                 style={{ display: "none" }}
               />
               <label
-                htmlFor="checkbox"
+                htmlFor="darkModeToggle"
                 className="checkbox-label"
                 style={{
-                  backgroundColor: "#111",
+                  backgroundColor: darkMode ? "#555" : "#111",
                   width: "50px",
                   height: "26px",
                   borderRadius: "50px",
@@ -177,21 +195,22 @@ const HeaderNav = () => {
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "center",
+                  padding: "0 5px",
                 }}
               >
-                <i className="fas fa-moon" style={{ color: "#f1c40f" }} />
-                <i className="fas fa-sun" style={{ color: "#f39c12" }} />
+                <i className="fas fa-moon" style={{ color: "#f1c40f", fontSize: "14px" }} />
+                <i className="fas fa-sun" style={{ color: "#f39c12", fontSize: "14px" }} />
                 <span
                   className="ball"
                   style={{
                     backgroundColor: "#fff",
-                    width: "22px",
-                    height: "22px",
+                    width: "20px",
+                    height: "20px",
                     position: "absolute",
                     left: darkMode ? "26px" : "2px",
-                    top: "2px",
+                    top: "3px",
                     borderRadius: "50%",
-                    transition: "transform 0.2s linear, left 0.2s",
+                    transition: "all 0.3s ease",
                   }}
                 />
               </label>
@@ -203,15 +222,21 @@ const HeaderNav = () => {
       {/* Global style */}
       <style jsx global>{`
         body.dark {
-          background-color: #292c35;
-          color: white;
+          background-color: #121212;
+          color: #ffffff;
         }
 
         @media (max-width: 768px) {
           body {
-            padding-top: ${menuOpen ? "200px" : "80px"};
+            padding-top: ${menuOpen ? "180px" : "80px"};
             transition: padding-top 0.3s ease;
           }
+        }
+
+        /* Improve accessibility for keyboard navigation */
+        [role="button"]:focus-visible {
+          outline: 2px solid white;
+          outline-offset: 2px;
         }
       `}</style>
     </>
