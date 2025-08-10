@@ -74,7 +74,7 @@ function PersonDate() {
             <div className={`relative z-10 ${isMobile ? 'flex flex-col items-center gap-6' : 'grid grid-cols-[150px_1fr] gap-4 items-center'}`}>
                 {/* Avatar */}
                 <div
-                    className="group w-[155px] aspect-square rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.3)] cursor-pointer transition-shadow duration-300 relative bg-[url('https://scontent-dus1-1.xx.fbcdn.net/v/t39.30808-1/294977727_1243258363145235_510610384567564219_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=e99d92&_nc_ohc=alqzHfBqgLwQ7kNvwFrca7R&_nc_oc=AdkOn0SYnELKyL5B--HFX90fcIWmTvI4lqt6awiwCJ6OuxeGP9viLrO8zld8t6V7vvteVdsizkdoNFvHPb4P_TL1&_nc_zt=24&_nc_ht=scontent-dus1-1.xx&_nc_gid=BJHyUzv59IgLZh4iackhLw&oh=00_AfW7hxI12j4qzz--Lo8vW1LSNr8_JomZfnxCU5YAvu_B_A&oe=6896BEEA')] bg-no-repeat bg-[60%_center] bg-cover hover:shadow-[0_8px_20px_rgba(0,0,0,0.6)] focus-visible:shadow-[0_8px_20px_rgba(0,0,0,0.6)] focus-visible:outline-none"
+                    className="group w-[155px] aspect-square rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.3)] cursor-pointer transition-shadow duration-300 relative bg-[url('/avatar.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=e99d92&_nc_ohc=alqzHfBqgLwQ7kNvwFrca7R&_nc_oc=AdkOn0SYnELKyL5B--HFX90fcIWmTvI4lqt6awiwCJ6OuxeGP9viLrO8zld8t6V7vvteVdsizkdoNFvHPb4P_TL1&_nc_zt=24&_nc_ht=scontent-dus1-1.xx&_nc_gid=BJHyUzv59IgLZh4iackhLw&oh=00_AfW7hxI12j4qzz--Lo8vW1LSNr8_JomZfnxCU5YAvu_B_A&oe=6896BEEA')] bg-no-repeat bg-[60%_center] bg-cover hover:shadow-[0_8px_20px_rgba(0,0,0,0.6)] focus-visible:shadow-[0_8px_20px_rgba(0,0,0,0.6)] focus-visible:outline-none"
                     tabIndex={0}
                     role="img"
                     aria-label="Avatar Image"
