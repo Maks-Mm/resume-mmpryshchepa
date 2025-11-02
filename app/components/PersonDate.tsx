@@ -64,7 +64,7 @@ function PersonDate() {
         <div
             className={`relative ${isMobile ? 'w-[90%]' : 'w-[calc(450px+36px)]'} h-min rounded-[25px] overflow-hidden ${theme === 'dark' ? 'bg-gray-800' : 'bg-gradient-to-br from-[#453F61] to-[#211E2A]'
                 } shadow-[0_10px_20px_rgba(0,0,0,0.25)] p-[18px] text-white/90 select-none`}
-            aria-label="Contact Card for Maksymilian Kuzminski"
+            aria-label="Contact Card for Maxim Pryshchepa"
             style={!isMobile ? { margin: "0 -100vh -40vh 0" } : {}}
         >
             {/* Background blur effect - Modified to move right */}
@@ -81,10 +81,6 @@ function PersonDate() {
                     style={{ marginLeft: '-10px' }}
                 />
 
-
-
-
-
                 {/* Info section */}
                 <div className={`flex flex-col gap-[0.8rem] font-normal ${isMobile ? 'w-full text-center items-center' : 'text-[1.1rem]'}`} style={{ fontFamily: '"Permanent Marker", cursive' }}>
                     <div className="flex items-center gap-3">
@@ -95,11 +91,11 @@ function PersonDate() {
                     </div>
                     <div className="flex items-center gap-3 italic text-[#a0c4ff]">
                         {!isMobile && <JobIcon />}
-                        <PermanentMarkerText>Lagerist Lagermitarbeiter Logistiker</PermanentMarkerText>
+                        <PermanentMarkerText>Warehouse Worker / Logistician</PermanentMarkerText>
                     </div>
                     <div className="flex items-center gap-3">
                         {!isMobile && <LocationIcon />}
-                        <PermanentMarkerText>Dortmund, Deutschland</PermanentMarkerText>
+                        <PermanentMarkerText>Dublin, Ireland</PermanentMarkerText>
                     </div>
                     <div className="flex items-center gap-3">
                         {!isMobile && <MailIcon />}

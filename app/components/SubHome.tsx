@@ -50,35 +50,35 @@ const SubHome = () => {
 
   const skills = [
     {
-      skill: 'Lagerorganisation',
+      skill: 'Warehouse Organization',
       percent: 95,
       icon: <FaBoxOpen style={iconStyles.box} className="inline mr-2" />,
     },
     {
-      skill: 'Qualitätssicherung',
+      skill: 'Quality Assurance',
       percent: 90,
       icon: <FaClipboardCheck style={iconStyles.clipboard} className="inline mr-2" />,
     },
     {
-      skill: 'Staplerfahrzeug',
+      skill: 'Forklift Operation',
       percent: 85,
       icon: <GiForklift style={iconStyles.forklift} className="inline mr-2" />,
     },
     {
-      skill: 'Warenkommissionierung',
+      skill: 'Order Picking',
       percent: 90,
       icon: <MdInventory style={iconStyles.inventory} className="inline mr-2" />,
     },
     {
-      skill: 'Webentwicklung',
+      skill: 'Web Development',
       percent: 75,
       icon: <MdComputer style={iconStyles.computer} className="inline mr-2" />,
     },
   ];
 
   const languages = [
-    { lang: 'Deutsch', percent: 100, flag: '🇩🇪' },
-    { lang: 'Englisch', percent: 100, flag: '🇬🇧' },
+    { lang: 'German', percent: 100, flag: '🇩🇪' },
+    { lang: 'English', percent: 100, flag: '🇬🇧' },
   ];
 
   return (
@@ -94,7 +94,7 @@ const SubHome = () => {
                   <div className="w-full">
                     <b className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
                       <AiFillSetting style={iconStyles.setting} />
-                      <PermanentMarkerText>Fähigkeiten</PermanentMarkerText>
+                      <PermanentMarkerText>Skills</PermanentMarkerText>
                     </b>
                   </div>
                 </div>
@@ -122,7 +122,7 @@ const SubHome = () => {
 
                 <p className="w3-large w3-text-theme flex items-center gap-2 mt-4 dark:text-teal-300">
                   <FaLanguage style={iconStyles.language} />
-                  <PermanentMarkerText><b>Sprachen</b></PermanentMarkerText>
+                  <PermanentMarkerText><b>Languages</b></PermanentMarkerText>
                 </p>
 
                 {languages.map(({ lang, percent, flag }, i) => (
@@ -142,14 +142,14 @@ const SubHome = () => {
 
                 <p className="w3-large w3-text-theme flex items-center gap-2 mt-4 dark:text-yellow-300">
                   <FaLightbulb style={iconStyles.lightbulb} />
-                  <PermanentMarkerText><b>Kompetenzen</b></PermanentMarkerText>
+                  <PermanentMarkerText><b>Competencies</b></PermanentMarkerText>
                 </p>
                 <ul className="list-disc pl-5 dark:text-gray-200">
-                  <li><PermanentMarkerText>Zuverlässigkeit und Pünktlichkeit</PermanentMarkerText></li>
-                  <li><PermanentMarkerText>Erfahrung mit modernen Lagersystemen</PermanentMarkerText></li>
-                  <li><PermanentMarkerText>Teamorientierte Arbeitsweise</PermanentMarkerText></li>
-                  <li><PermanentMarkerText>Gültiger Staplerschein</PermanentMarkerText></li>
-                  <li><PermanentMarkerText>Grundkenntnisse in Webentwicklung</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Reliability and punctuality</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Experience with modern warehouse systems</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Team-oriented working style</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Valid forklift license</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Basic knowledge of web development</PermanentMarkerText></li>
                 </ul>
               </div>
             </div>
@@ -163,19 +163,19 @@ const SubHome = () => {
 
             <div className={`w3-container w3-card w3-white w3-margin-bottom ${theme === 'dark' ? 'dark:bg-gray-800 dark:text-white' : ''}`} data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
               <h2 className="w3-text-grey w3-padding-16 dark:text-gray-300">
-                <PermanentMarkerText>Beruflicher Werdegang</PermanentMarkerText>
+                <PermanentMarkerText>Professional Experience</PermanentMarkerText>
               </h2>
 
               {/* Siemens */}
               <div className="w3-container">
                 <h5 className="w3-opacity dark:text-gray-200">
-                  <PermanentMarkerText><b>Lagermitarbeiter - Falkensee SE, Siemens Energy</b></PermanentMarkerText>
+                  <PermanentMarkerText><b>Warehouse Worker - Falkensee SE, Siemens Energy</b></PermanentMarkerText>
                 </h5>
-                <h6 className="w3-text-teal dark:text-teal-300"><PermanentMarkerText>bis 04.2025</PermanentMarkerText></h6>
+                <h6 className="w3-text-teal dark:text-teal-300"><PermanentMarkerText>until 04.2025</PermanentMarkerText></h6>
                 <ul className="dark:text-gray-300">
-                  <li><PermanentMarkerText>Verantwortung für die Lagerorganisation und -verwaltung</PermanentMarkerText></li>
-                  <li><PermanentMarkerText>Unterstützung bei der Qualitätskontrolle und Dokumentation</PermanentMarkerText></li>
-                  <li><PermanentMarkerText>Mitarbeit bei Wareneingängen und -ausgängen</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Responsible for warehouse organization and management</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Assisting with quality control and documentation</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Participation in goods receipt and dispatch</PermanentMarkerText></li>
                 </ul>
                 <hr className="dark:border-gray-700" />
               </div>
@@ -187,13 +187,13 @@ const SubHome = () => {
               {/* BSH */}
               <div className="w3-container">
                 <h5 className="w3-opacity dark:text-gray-200">
-                  <PermanentMarkerText><b>Lagermitarbeiter - BSH Service Nauen GmbH</b></PermanentMarkerText>
+                  <PermanentMarkerText><b>Warehouse Worker - BSH Service Nauen GmbH</b></PermanentMarkerText>
                 </h5>
                 <h6 className="w3-text-teal dark:text-teal-300"><PermanentMarkerText>11/2022 – 11/2023</PermanentMarkerText></h6>
                 <ul className="dark:text-gray-300">
-                  <li><PermanentMarkerText>Kommissionierung und Verpackung von Waren</PermanentMarkerText></li>
-                  <li><PermanentMarkerText>Bedienung von Scansystemen zur Erfassung von Lagerbeständen</PermanentMarkerText></li>
-                  <li><PermanentMarkerText>Teamarbeit in einem respektvollen Arbeitsumfeld</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Picking and packing of goods</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Operation of scanning systems for inventory management</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Teamwork in a respectful work environment</PermanentMarkerText></li>
                 </ul>
                 <hr className="dark:border-gray-700" />
               </div>
@@ -205,13 +205,13 @@ const SubHome = () => {
               {/* Farmacol */}
               <div className="w3-container">
                 <h5 className="w3-opacity dark:text-gray-200">
-                  <PermanentMarkerText><b>Lagermitarbeiter - Medizinpräparate Farmacol.SA</b></PermanentMarkerText>
+                  <PermanentMarkerText><b>Warehouse Worker - Pharmaceutical Products, Farmacol.SA</b></PermanentMarkerText>
                 </h5>
                 <h6 className="w3-text-teal dark:text-teal-300"><PermanentMarkerText>2019 – 2021</PermanentMarkerText></h6>
                 <ul className="dark:text-gray-300">
-                  <li><PermanentMarkerText>Verwaltung und Ausgabe von medizinischen Produkten</PermanentMarkerText></li>
-                  <li><PermanentMarkerText>Inventur und Bestandsaufnahme</PermanentMarkerText></li>
-                  <li><PermanentMarkerText>Einhaltung von Hygienevorschriften</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Management and distribution of medical products</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Inventory and stocktaking</PermanentMarkerText></li>
+                  <li><PermanentMarkerText>Compliance with hygiene regulations</PermanentMarkerText></li>
                 </ul>
               </div>
             </div>
