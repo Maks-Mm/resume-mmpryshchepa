@@ -95,7 +95,7 @@ function PersonDate() {
                     </div>
                     <div className="flex items-center gap-3">
                         {!isMobile && <LocationIcon />}
-                        <PermanentMarkerText>Dublin, Ireland</PermanentMarkerText>
+                        <PermanentMarkerText>Berlin Osloerstr,Deutschland</PermanentMarkerText>
                     </div>
                     <div className="flex items-center gap-3">
                         {!isMobile && <MailIcon />}
