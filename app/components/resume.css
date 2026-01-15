@@ -1,0 +1,69 @@
+/*app/components/resume.css*/
+
+
+
+/* CV version of the personal card */
+.resume-root .person-card {
+  background: linear-gradient(135deg, #1e293b, #020617);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+  border-radius: 18px;
+}
+
+/* kill the huge blur background */
+.resume-root .person-card .person-bg {
+  display: none;
+}
+
+/* remove the crazy negative margins */
+.resume-root .person-card {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+
+.resume-root {
+  background: #0f172a;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.resume-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 30px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.resume-sidebar {
+  background: #111827;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.resume-content {
+  background: #0b1220;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.resume-section {
+  margin-bottom: 25px;
+}
+
+.skill-row {
+  margin-bottom: 12px;
+}
+
+.skill-bar {
+  background: #1e293b;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  background: linear-gradient(90deg, #14b8a6, #22c55e);
+  padding: 3px 8px;
+  color: black;
+  font-size: 12px;
+}
