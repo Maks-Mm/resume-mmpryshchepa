@@ -95,7 +95,7 @@ function PersonDate() {
                     </div>
                     <div className="flex items-center gap-3">
                         {!isMobile && <StandortIcon />}
-                        <PermanentMarkerText>Frankfurt (Oder), Deutschland</PermanentMarkerText>
+                        <PermanentMarkerText>Berlin, Deutschland</PermanentMarkerText>
                     </div>
                     <div className="flex items-center gap-3">
                         {!isMobile && <EmailIcon />}
@@ -108,8 +108,8 @@ function PersonDate() {
                     <div className="flex items-center gap-3">
                         {!isMobile && <TelefonIcon />}
                         <PermanentMarkerText>
-                            <a href="tel:+4915234803926" className="text-[#a0c4ff] hover:underline">
-                                +49 1523 480 39 26
+                            <a href="tel:+491637232249" className="text-[#a0c4ff] hover:underline">
+                                +49 163 72 32 249
                             </a>
                         </PermanentMarkerText>
                     </div>
