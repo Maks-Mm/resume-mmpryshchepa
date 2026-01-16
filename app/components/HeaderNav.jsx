@@ -220,7 +220,7 @@ const HeaderNav = () => {
       </nav>
 
       {/* Global style */}
-      <style jsx global>{`
+      <style jsx global className="font-marker">{`
         body.dark {
           background-color: #121212;
           color: #ffffff;

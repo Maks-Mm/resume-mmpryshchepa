@@ -1,12 +1,8 @@
-/*app/globals.css*/
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Tint&family=Rubik+Glitch&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
+/* Custom font */
 @font-face {
   font-family: "Ponomar";
   src: url("/fonts/Ponomar-Regular.woff2") format("woff2");
@@ -14,45 +10,23 @@
   font-style: normal;
   font-display: swap;
 }
-.ponomar-regular {
-  font-family: "Ponomar", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-/* globals.css or a relevant CSS file */
+
+/* Font utilities */
 .font-ponomar {
-  font-family: 'Ponomar', system-ui, sans-serif;
-}
-
-.bungee-tint-regular {
-    font-family: "Bungee Tint", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.rubik-glitch-regular {
-    font-family: "Rubik Glitch", system-ui;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Ponomar", system-ui, sans-serif;
 }
 
 .bungee-tint {
   font-family: "Bungee Tint", sans-serif;
-  font-weight: 400;
 }
 
 .rubik-glitch {
   font-family: "Rubik Glitch", system-ui;
-  font-weight: 400;
 }
 
+/* ❌ REMOVE THIS */
+/*
 body {
   font-family: 'Montserrat', sans-serif;
-  transition: background 0.2s linear;
 }
-/* styles/globals.css */
-body.dark {
-  background-color: #121212;
-  color: white;
-  transition: background 0.3s, color 0.3s;
-}
+*/

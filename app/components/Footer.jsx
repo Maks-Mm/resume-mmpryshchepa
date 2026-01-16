@@ -6,7 +6,7 @@ const Footer = () => {
   const iconSize = 30;
   
   const quickLinks = [
-    "Home", "Projects", "Experience", "Education", "Skills", "Contact"
+     "Experience", "Education", "Skills",
   ];
   
   const contactInfo = [
@@ -17,7 +17,7 @@ const Footer = () => {
   ];
 
   const technologies = [
-    "React", "Node.js", "TypeScript", "Python", "AWS", "Docker"
+    "React", "Node.js", "TypeScript",
   ];
 
   return (

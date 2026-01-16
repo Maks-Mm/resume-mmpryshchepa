@@ -1,30 +1,43 @@
-/*app/components/resume.css*/
+/* app/components/resume.css */
 
-
-
-/* CV version of the personal card */
-.resume-root .person-card {
-  background: linear-gradient(135deg, #6d7c93, #6d7c93);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
-  border-radius: 18px;
+/* Base Glassmorphism Variables - Neutral Gray Theme */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --primary-gradient: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
+  --secondary-gradient: linear-gradient(135deg, #4b5563 0%, #9ca3af 74%);
+  --accent-gradient: linear-gradient(135deg, #6b7280, #374151);
+  --text-light: #ffffff;
+  --text-dark: #1f2937;
+  --neutral-gray: #6b7280;
+  --light-gray: #9ca3af;
+  --dark-gray: #374151;
 }
 
-/* kill the huge blur background */
-.resume-root .person-card .person-bg {
-  display: none;
+body {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: rgb(12, 12, 12);
+  min-height: 100vh;
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
 }
 
-/* remove the crazy negative margins */
-.resume-root .person-card {
-  margin: 0 !important;
-  width: 100% !important;
-}
-
-
+/* Resume Container with Glass Effect */
 .resume-root {
-  background: gray;
   min-height: 100vh;
   padding: 40px;
+  background: radial-gradient(
+    circle at 20% 30%,
+    rgba(107, 114, 128, 0.3) 0%,
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 80% 70%,
+    rgba(156, 163, 175, 0.2) 0%,
+    transparent 50%
+  );
 }
 
 .resume-layout {
@@ -35,35 +48,248 @@
   margin: auto;
 }
 
+/* Sidebar Glass Card */
 .resume-sidebar {
-  background: rgb(116, 238, 157);
-  border-radius: 12px;
-  padding: 25px;
-}
-
-.resume-content {
-  background: rgb(116, 201, 238);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: var(--glass-shadow);
   padding: 30px;
+  transition: all 0.3s ease;
 }
 
+.resume-sidebar:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Content Glass Card */
+.resume-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: var(--glass-shadow);
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+.resume-content:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Glass Cards */
 .resume-section {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 25px;
   margin-bottom: 25px;
+  transition: all 0.3s ease;
 }
 
+.resume-section:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.resume-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.resume-section h2::before {
+  content: '';
+  width: 4px;
+  height: 24px;
+  background: var(--primary-gradient);
+  border-radius: 2px;
+}
+
+/* Job Block Glass */
+.job-block {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.job-block:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.job-block h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.job-block span {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.job-block ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.job-block li {
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.job-block li::before {
+  content: '▸';
+  color: var(--neutral-gray);
+  position: absolute;
+  left: 0;
+  font-size: 16px;
+}
+
+/* Skill Bar Glass Effect */
 .skill-row {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .skill-bar {
-  background: #1e293b;
-  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  height: 8px;
+  margin-bottom: 5px;
 }
 
 .skill-fill {
-  background: linear-gradient(90deg, #14b8a6, #22c55e);
-  padding: 3px 8px;
-  color: black;
-  font-size: 12px;
+  background: linear-gradient(90deg, #6b7280, #9ca3af);
+  height: 100%;
+  position: relative;
+  transition: width 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.skill-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Person Card Glass Effect */
+.person-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: var(--glass-shadow);
+  padding: 30px;
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.person-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.person-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+/* Remove old background gradients from person card */
+.person-bg {
+  display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .resume-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .resume-sidebar {
+    order: 2;
+  }
+  
+  .resume-content {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-root {
+    padding: 20px;
+  }
+  
+  .resume-sidebar,
+  .resume-content {
+    padding: 20px;
+  }
+  
+  .job-block {
+    padding: 15px;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --glass-bg: rgba(30, 30, 30, 0.3);
+    --glass-border: rgba(255, 255, 255, 0.1);
+  }
+  
+  .resume-section,
+  .job-block,
+  .skill-bar {
+    background: rgba(30, 30, 30, 0.3);
+  }
 }
