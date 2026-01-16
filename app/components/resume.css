@@ -4,7 +4,7 @@
 
 /* CV version of the personal card */
 .resume-root .person-card {
-  background: linear-gradient(135deg, #1e293b, #020617);
+  background: linear-gradient(135deg, #6d7c93, #6d7c93);
   box-shadow: 0 8px 30px rgba(0,0,0,0.35);
   border-radius: 18px;
 }
@@ -22,7 +22,7 @@
 
 
 .resume-root {
-  background: #0f172a;
+  background: gray;
   min-height: 100vh;
   padding: 40px;
 }
@@ -36,13 +36,13 @@
 }
 
 .resume-sidebar {
-  background: #111827;
+  background: rgb(116, 238, 157);
   border-radius: 12px;
   padding: 25px;
 }
 
 .resume-content {
-  background: #0b1220;
+  background: rgb(116, 201, 238);
   border-radius: 12px;
   padding: 30px;
 }
