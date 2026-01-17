@@ -19,7 +19,7 @@ const jobs = [
 
 const ExperienceList: React.FC = () => {
   return (
-    <section className="glass-card experience-section">
+    <section className="glass-card experience-section ">
       <div className="card-header">
         <div className="icon-wrapper">
           <i className="fas fa-briefcase text-xl"></i>
@@ -52,6 +52,7 @@ const ExperienceList: React.FC = () => {
           padding: 30px;
           margin-bottom: 30px;
           transition: all 0.3s ease;
+          margin-top: 27px;
         }
         
         .glass-card:hover {

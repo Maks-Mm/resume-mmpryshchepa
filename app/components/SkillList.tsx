@@ -1,4 +1,4 @@
-//app/components/SubHomeStyles.tsx
+// app/components/SubHomeStyles.tsx
 
 import { GiForklift } from 'react-icons/gi';
 import { FaBoxOpen, FaClipboardCheck } from 'react-icons/fa6';
